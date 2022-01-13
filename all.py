@@ -12,8 +12,8 @@ def create_connection(host_name, user_name, database):
 def read(mydb,mycursor):
 	
 	try:
-		print("Reading the database....")
-		time.sleep(1)
+		#print("Reading the database....")
+		#time.sleep(1)
 		myresult=None
 		count=0
 		sql="select * from user"
@@ -28,7 +28,7 @@ def read(mydb,mycursor):
 	print("\n")
 
 def insert(mydb,mycursor):
-	print("To insert record...")
+	#print("To insert record...")
 
 	try:
 		id=input("Enter user id ")	
@@ -62,12 +62,12 @@ def insert(mydb,mycursor):
 			sqlform="Insert into user values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
 			mycursor.execute(sqlform , final_data)
 			mydb.commit()
-			print('Record inserted')
-			print('\n')
-			read(mydb,mycursor)
+			return {"Record inserted"}
+			#print('\n')
+			#read(mydb,mycursor)
 		
 		else:
-			print("Record with id ",id," exists")
+			return {"Record exists"}
 
 	except Exception as e:
 		print(e)
@@ -79,7 +79,7 @@ def update(mydb,mycursor):
 		mycursor.execute(sql)
 		row=mycursor.fetchone()
 		if(row==None):
-			print("Record with id " , id , " not found")
+			return {"Record not found"}
 		else:
 			while(1):
 				print("1. Name\n2. DOB\n3. Age\n4. Skills\n5. Education\n6. Contact\n7. Experience\n8. Address\n9. Gender")
@@ -129,7 +129,7 @@ def update(mydb,mycursor):
 				sql="update user set {} where uid={}".format(pat,id)
 				mycursor.execute(sql)
 				mydb.commit()
-				print("Record Updated")
+				return {"Record Updated"}
 	except Exception as e:
 		print(e)
 	
@@ -137,16 +137,21 @@ def delete(mydb,mycursor):
 	try:
 		print('Enter the id of the user you want to delete')
 		id=input()
+		check="select * from user where uid=%s"
+		mycursor.execute(check,(id,))
+		row=mycursor.fetchone()
+		if (row==None):
+			return {"Record does not exist"}
 		sql="delete from user where uid=%s"
 		mycursor.execute(sql,(id,))
 		mydb.commit()
-		print("Record deleted")
-		print('\n')
-		read(mydb,mycursor)
+		return {"Record deleted"}
+		#print('\n')
+		#read(mydb,mycursor)
 	except Exception as e:
-		print(e)
+		return e
 
-def readone(mydb,mycursory):
+def readone(mydb,mycursor):
 	try:
 		uid=input("Enter user id whose information is to be read ")
 		sql="select * from user where uid=%s"
