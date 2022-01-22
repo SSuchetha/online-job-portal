@@ -20,6 +20,7 @@ class details(BaseModel):
 	experience:str
 	address:str
 	gender:str
+	password:str
 
 class updateDetails(BaseModel):
 	name : Optional[str]=None
@@ -31,6 +32,7 @@ class updateDetails(BaseModel):
 	experience : Optional[str]=None
 	address : Optional[str]=None
 	gender : Optional[str]=None
+	password : Optional[str]=None
 
 @app.get("/")
 def welcome():
