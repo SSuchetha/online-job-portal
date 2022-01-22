@@ -1,0 +1,94 @@
+.container-para
+{
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: justify;
+    font-weight: 900;
+    font-family: 'Lato',sans-serif;
+}
+
+.text-center
+{
+    color: rgb(0, 132, 255);
+}
+
+.container-fluid
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(48, 46, 46);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+}
+
+hr
+{
+    width: 80%;
+}
+
+h2
+{
+    font-size: 20px;
+}
+
+.contact-items
+{
+    display: flex;
+    margin: 30px auto;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.customer-care
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28%;
+    margin: 30px auto;
+    padding: 35px 15px;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 250px;
+    
+}
+
+.customer-care
+{
+    height: 250px;
+    box-shadow: 0 15px 15px rgb(0, 132, 255);
+    border: 1px solid rgb(0, 132, 255);
+}
+
+p{
+    font-size: 15px;
+}
+
+button
+{
+    padding: 8px 16px;
+    font-size: 17px;
+    border-radius: 25px;
+    border: none;
+    margin: 15px auto;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+button:hover
+{
+    color: black;
+}
+
+#cust-care
+{
+    background: blue;
+    box-shadow: 0 0 5px black;
+}
+
+a
+{
+    font-size: 16px;
+}

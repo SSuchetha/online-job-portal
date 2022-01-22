@@ -1,0 +1,62 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#jobs
+{
+    background: #b2b2fd;
+    padding: 50px 0;
+}
+
+.company-details
+{
+    box-shadow: 0 2px 70px rgba(110, 130, 208, .18);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.job-update
+{
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.job-update .fa
+{
+    margin-top: 5px;
+    margin-right: 10px;
+    color: #77d1b1;
+}
+
+.job-update small
+{
+    background: #efefef;
+    padding: 1px 5px;
+    margin: 0 5px;
+}
+
+.job-update p
+{
+    margin-bottom: 0 !important;
+}
+
+/*.apply-btn
+{
+    height: 40px;
+    padding: 7px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.apply-btn .btn-primary
+{
+    padding: 0 30px;
+    float: right;
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid white;
+}*/
