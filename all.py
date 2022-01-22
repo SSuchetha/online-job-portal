@@ -41,9 +41,10 @@ def insert(mydb,mycursor,info):
 				data.append(info.experience)
 				data.append(info.address)
 				data.append(info.gender)
+				data.append(info.password)
 
 				final_data=tuple(data)
-				sqlform="Insert into user values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+				sqlform="Insert into user values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
 				mycursor.execute(sqlform , final_data)
 				mydb.commit()
 				sql="select current_timestamp()"
