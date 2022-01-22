@@ -1,0 +1,4 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `getUsers`()
+BEGIN
+    select *from user;
+END
