@@ -1,3 +1,16 @@
 fastapi == 0.65.1
 uvicorn == 0.14.0
 motor == 2.4.0
+
+# databases
+sqlalchemy
+psycopg2-binary
+
+# for env variab    le
+python-dotenv
+
+# for email valdiation
+pydantic[email]
+
+#hashing 
+passlib[bcrypt]
