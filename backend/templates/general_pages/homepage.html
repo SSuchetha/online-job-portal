@@ -2,7 +2,103 @@
 
 
 {% block title %}
-  <title>JobHunt</title>
+  <title>JObHunt</title>
+  <style>
+    .para
+{
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: justify;
+    font-weight: 900;
+    font-family: 'Lato',sans-serif;
+}
+
+.text-center
+{
+    color: rgb(0, 132, 255);
+}
+
+.container-fluid
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(48, 46, 46);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+}
+
+hr
+{
+    width: 80%;
+}
+
+h2
+{
+    font-size: 20px;
+}
+
+.contact-items
+{
+    display: flex;
+    margin: 30px auto;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.customer-care
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28%;
+    margin: 30px auto;
+    padding: 35px 15px;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 250px;
+    
+}
+
+.customer-care
+{
+    height: 250px;
+    box-shadow: 0 15px 15px rgb(0, 132, 255);
+    border: 1px solid rgb(0, 132, 255);
+}
+
+p{
+    font-size: 15px;
+}
+
+button
+{
+    padding: 8px 16px;
+    font-size: 17px;
+    border-radius: 25px;
+    border: none;
+    margin: 15px auto;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+button:hover
+{
+    color: black;
+}
+
+#cust-care
+{
+    background: blue;
+    box-shadow: 0 0 5px black;
+}
+
+a
+{
+    font-size: 16px;
+}
+  </style>
 {% endblock %}
 
 {% block content %}
@@ -12,7 +108,7 @@
   <div class="container">
   <div class="row">
     <div class="col">
-      <h1 class="display-5">Find Jobs..</h1>
+      <h3 class="display-5">Find Jobs..</h3>
     </div>
   </div>
   <!--<img src="home.jpg" alt="Not Found">-->
@@ -29,6 +125,60 @@
             </div></div><br><div class="row">
           {% endif %}
       {% endfor %}
+  </div>
+</div>
+
+<div class="para">
+  <p>
+    <div class="container text-center"><h3>Say HELLO to JObHunt!!</h3></div> <br>
+    The official one-stop destination to land your dream job. JObHunt connects 
+    jobseekers and recruiters by accurately matching candidate profiles to the relevant job openings through 
+    an advanced 2-way matching technology. It works closely to bridge the gap between talent & opportunities 
+    and offers end-to-end recruitment solutions. 
+  </p>
+  <br>
+  <p>
+    <div class="container text-center">
+      <h3>How to use?</h3>
+    </div>
+    First register yourself in this platform by providing the valid details and you are good to go!!
+    <br><br>
+    You can apply for any job you want. You can also search for the jobs by providing the right keywords.
+  </p>
+</div>
+
+<div class="container-fluid">
+  <h3>Contact Us</h3>
+  <hr>
+  <h4>Have any questions? We'd love to hear from you</h4>
+  <div class="contact-items">
+    <div class="customer-care">
+      <h3>Customer Care</h3>
+      <p>Our Support team is spread all over the world to give you fast response</p>
+      <!--<button id="cust-care"> Submit a Request</button>-->
+      <p>
+        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          Submit a Request
+        </a>
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          <div class="pricing-plan__description">
+            <ul class="pricing-plan__list">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="username" aria-label="First name">
+              </div>
+              <br>
+              <div class="mb-3">
+                <input type="text" class="form-control" id="exampleInputRequest" placeholder="Request" aria-describedby="request">
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary" type="submit">Submit</button>
+              </div>
+            </ul>
+        </div>            
+      </div>
+    </div> 
   </div>
 </div>
 {% endblock %}
